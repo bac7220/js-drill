@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue learning</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <style>
+      .complete {
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+      input {
+        padding: 6px;
+      }
+    </style>
+    <div id="app">
+      <h2>todoリスト</h2>
+      <input v-model="newTodo" placeholder="新しいタスクを追加" />
+      <button @click="addTodo">追加</button>
+      <ul>
+        <li v-for="(todo , index) in todos" :key="index">
+          <button @click="toggleComplete(index)" :class="{complete:todo.complete}">
+            {{index}} - {{ todo.text}}
+          </button>
+          <button @click="deleteTodo(index)">×</button>
+        </li>
+      </ul>
+    </div>
+    <div id="tabapp">
+      <h2>タブ切り替え</h2>
+      <button class="tab-button" :class="{active:activeTab === 'tab1'}" @click="activeTab = 'tab1'">
+        タブ1
+      </button>
+      <button class="tab-button" :class="{active:activeTab === 'tab2'}" @click="activeTab = 'tab2'">
+        タブ2
+      </button>
+      <button class="tab-button" :class="{active:activeTab === 'tab3'}" @click="activeTab = 'tab3'">
+        タブ3
+      </button>
+      <button class="tab-button" :class="{active:activeTab === 'tab4'}" @click="activeTab = 'tab4'">
+        タブ4
+      </button>
+      <button class="tab-button" :class="{active:activeTab === 'tab5'}" @click="activeTab = 'tab5'">
+        タブ5
+      </button>
+
+      <div class="tab-content" v-if="activeTab === 'tab1'">
+        <p>タブ1の内容です</p>
+      </div>
+      <div class="tab-content" v-if="activeTab === 'tab2'">
+        <p>タブ2の内容です</p>
+      </div>
+      <div class="tab-content" v-if="activeTab === 'tab3'">
+        <p>タブ3の内容です</p>
+      </div>
+      <div class="tab-content" v-if="activeTab === 'tab4'">
+        <p>タブ4の内容です</p>
+      </div>
+      <div class="tab-content" v-if="activeTab === 'tab5'">
+        <p>タブ5の内容です</p>
+      </div>
+    </div>
+    <script>
+      const { createApp } = Vue;
+      console.log(Vue);
+      const app = createApp({
+        data() {
+          return {
+            todos: [],
+            newTodo: "",
+          };
+        },
+        methods: {
+          addTodo() {
+            this.todos.push({
+              text: this.newTodo,
+              complete: false,
+            });
+          },
+          deleteTodo(index) {
+            this.todos.splice(index, 1);
+          },
+          toggleComplete(index) {
+            this.todos[index].complete = !this.todos[index].complete;
+          },
+        },
+      });
+      app.component("todo-item", {
+        props: ["todo"],
+        template: `<li> {{ todo.text}}</li>`,
+      });
+      app.mount("#app");
+
+      createApp({
+        data() {
+          return {
+            activeTab: "tab1",
+          };
+        },
+      }).mount("#tabapp");
+    </script>
+  </body>
+</html>

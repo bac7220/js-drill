@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="lesson-1"></p>
+      <p class="lesson-2"></p>
+    </div>
+    <div class="wrapper">
+      <button class="push">クリック</button>
+      <div class="target">ここにクラスを追加したい</div>
+    </div>
+    <div class="wrapper">
+      <p class="fruits"></p>
+      <p class="basket"></p>
+    </div>
+
+    <div class="wrapper">
+      <h2>todoリスト</h2>
+      <div class="todo-field">
+        <div class="input-content">
+          <p>新規追加</p>
+          <input type="text" class="todo-input" placeholder="タスクを入力" />
+          <button class="add-button">追加</button>
+        </div>
+        <ul class="todo-list"></ul>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h2>カウンターアプリ</h2>
+      <div class="counter-field">
+        <p class="counter">0</p>
+        <button class="decrease">減らす</button>
+        <button class="increase">増やす</button>
+        <button class="reset">リセット</button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h2>簡単な計算機アプリ</h2>
+      <div class="calc-field" style="display: flex; gap: 8px">
+        <input type="text" class="calc-input-first" placeholder="数字を入力" />
+        <button class="calc-plus">+</button>
+        <button class="calc-minus">-</button>
+        <button class="calc-multiply">*</button>
+        <button class="calc-divide">/</button>
+        <input type="text" class="calc-input-second" placeholder="数字を入力" />
+        <button class="calc-equal">=</button>
+        <p class="calc-result"></p>
+      </div>
+    </div>
+    <div class="wraper news-app">
+      <h2>ニュースアプリ</h2>
+      <button class="get-news">最新ニュースを取得</button>
+      <ul class="news-list">
+
+      </ul>
+    </div>
+    <div class="wrapper exchange-app">
+      <h2>為替アプリ</h2>
+      <button class="get-exchange">為替を取得</button>
+      <ul class="exchange-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
