@@ -1,0 +1,97 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  height: auto;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.box {
+  display: block;
+  background-color: #87ceeb;
+  padding: 10px;
+}
+
+.ber {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #333;
+  left: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.ber:first-of-type {
+  top: 5px;
+}
+.ber:nth-of-type(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.ber:nth-of-type(3) {
+  bottom: 5px;
+}
+
+#simple.is-action .ber {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#simple.is-action .ber:first-of-type {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+#simple.is-action .ber:nth-of-type(2) {
+  opacity: 0;
+}
+#simple.is-action .ber:nth-of-type(3) {
+  bottom: 50%;
+  -webkit-transform: translateY(50%) rotate(-45deg);
+          transform: translateY(50%) rotate(-45deg);
+}
+
+#Rotation.is-action .ber {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#Rotation.is-action .ber:first-of-type {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(315deg);
+          transform: translateY(-50%) rotate(315deg);
+}
+#Rotation.is-action .ber:nth-of-type(2) {
+  opacity: 0;
+}
+#Rotation.is-action .ber:nth-of-type(3) {
+  bottom: 50%;
+  -webkit-transform: translateY(50%) rotate(-315deg);
+          transform: translateY(50%) rotate(-315deg);
+}
