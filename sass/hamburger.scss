@@ -29,7 +29,7 @@ h1 {
 
 .box {
   display: block;
-  background-color: #87ceeb;
+  // background-color: #87ceeb;
   padding: 10px;
 }
 
@@ -71,8 +71,8 @@ h1 {
   }
 }
 
-#Rotation{
-   &.is-action {
+#Rotation {
+  &.is-action {
     .ber {
       transition: all 0.3s ease-in-out;
       &:first-of-type {
@@ -89,3 +89,4 @@ h1 {
     }
   }
 }
+

@@ -217,3 +217,13 @@ getExcBtn.addEventListener('click', async function () {
     excList.appendChild(excItem);
   });
 });
+
+
+window.addEventListener('load', function () {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    const pos = target.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo(0, pos - 80);
+  }
+})
+

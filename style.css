@@ -52,3 +52,23 @@ body {
   width: 300px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
+
+
+.background-slash{
+  position: relative;
+}
+
+.background-slash::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  background-color: #F7F7F7;
+  opacity: 0.5;
+  z-index: -1;
+  /* transform: rotate(10deg); */
+  transform-origin:left top;
+  transform: skewY(10deg);
+}

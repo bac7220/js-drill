@@ -6,6 +6,7 @@
     <title>ハンバーガーメニュー</title>
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css" />
     <link rel="stylesheet" href="/css/hamburger.css" />
+    <link rel="stylesheet" href="/madomagi.base.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -25,8 +26,21 @@
             <span class="ber"></span>
           </button>
         </div>
+        <div class="container">
+          <div class="box">
+            <h2 class="title">タイトル</h2>
+          </div>
+        </div>
       </div>
     </div>
     <script src="demo.js"></script>
+    <script>
+      const menuButton = document.querySelector(".js-menu");
+
+      menuButton.addEventListener("click", () => {
+        document.body.classList.toggle("is-menu-open");
+        menuButton.classList.toggle("is-active");
+      });
+    </script>
   </body>
 </html>
