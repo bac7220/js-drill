@@ -1,13 +1,6 @@
-const simple = document.querySelector("#simple");
-      simple.addEventListener("click", function () {
-        simple.classList.toggle("is-action");
-      });
-      
-      const Rotation = document.querySelector("#Rotation");
-      Rotation.addEventListener("click", function () {
-        Rotation.classList.toggle("is-action");
-      });
-
- const flow = document.querySelector("#flow");
-
- 
+const hamburger = document.querySelectorAll('.hamburger');
+hamburger.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('is-action');
+  });
+});

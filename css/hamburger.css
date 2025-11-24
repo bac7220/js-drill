@@ -31,6 +31,7 @@ h1 {
   width: 50px;
   height: 40px;
   cursor: pointer;
+  background-color: #eee;
 }
 
 .box {
@@ -42,10 +43,11 @@ h1 {
   position: absolute;
   width: 40px;
   height: 3px;
+  border-radius: 5px;
   background-color: #333;
   left: 5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .ber:first-of-type {
   top: 5px;
@@ -57,6 +59,150 @@ h1 {
 }
 .ber:nth-of-type(3) {
   bottom: 5px;
+}
+
+#simple.is-action .ber {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#simple.is-action .ber:first-of-type {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+#simple.is-action .ber:nth-of-type(2) {
+  opacity: 0;
+}
+#simple.is-action .ber:nth-of-type(3) {
+  bottom: 50%;
+  -webkit-transform: translateY(50%) rotate(-45deg);
+          transform: translateY(50%) rotate(-45deg);
+}
+
+#Rotation.is-action .ber {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#Rotation.is-action .ber:first-of-type {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(315deg);
+          transform: translateY(-50%) rotate(315deg);
+}
+#Rotation.is-action .ber:nth-of-type(2) {
+  opacity: 0;
+}
+#Rotation.is-action .ber:nth-of-type(3) {
+  bottom: 50%;
+  -webkit-transform: translateY(50%) rotate(-315deg);
+          transform: translateY(50%) rotate(-315deg);
+}
+
+
+/* 左軸で回転するスタイリッシュ */
+#pivot .ber {
+  /* transform-origin: right center; */
+}
+
+#pivot.is-action .ber:nth-child(1) {
+  transform: translate(5px , 13px) rotate(135deg);
+  transform-origin: center center;
+}
+
+#pivot.is-action .ber:nth-child(2) {
+  width: 0;
+}
+
+#pivot.is-action .ber:nth-child(3) {
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+
+/* 真ん中が飛んでいく遊び系 */
+#burst.is-action .ber:nth-child(1) {
+  transform: translate(-0px , 13px) rotate(45deg);
+}
+
+#burst.is-action .ber:nth-child(2) {
+  opacity: 0;
+  transform: translateX(16px);
+}
+
+#burst.is-action .ber:nth-child(3) {
+  transform: translate(-0px, -13px) rotate(-45deg);
+}
+
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  height: auto;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.box {
+  display: block;
+  padding: 10px;
+}
+
+.ber {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #333;
+  left: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.ber:first-of-type {
+  top: 8px;
+}
+.ber:nth-of-type(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.ber:nth-of-type(3) {
+  bottom: 8px;
+}
+
+.line {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #333;
+  left: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.line:first-of-type {
+  top: 12px;
+}
+.line:nth-of-type(2) {
+  bottom: 12px;
 }
 
 #simple.is-action .ber {
@@ -93,4 +239,62 @@ h1 {
   bottom: 50%;
   -webkit-transform: translateY(50%) rotate(-315deg);
           transform: translateY(50%) rotate(-315deg);
+}
+
+
+
+#pivot.is-action .ber:nth-child(1) {
+  transform: translate(0px , 11px) rotate(135deg);
+  transform-origin: center center;
+}
+
+#pivot.is-action .ber:nth-child(2) {
+  width: 0;
+}
+
+#pivot.is-action .ber:nth-child(3) {
+  transform: translate( -5px, 4px)rotate(45deg);
+  transform-origin: right;
+}
+
+#burst.is-action .ber:nth-child(1) {
+  transform: translate(-0px , 11px) rotate(45deg);
+}
+
+#burst.is-action .ber:nth-child(2) {
+  opacity: 0;
+  transform: translateX(16px);
+}
+
+#burst.is-action .ber:nth-child(3) {
+  transform: translate(-0px, -11px) rotate(-45deg);
+}
+
+#morph .ber {
+  transition: all 0.3s ease;
+}
+#morph.is-action .ber:nth-child(1) {
+  transform: translateY(-50%) rotate(45deg);
+  top:20px;
+}
+
+#morph.is-action .ber:nth-child(2) {
+  opacity: 0;
+}
+
+#morph.is-action .ber:nth-child(3) {
+  bottom: 50%;
+  transform: translate3d(-2px, 2px, 0) rotate(135deg);
+}
+
+
+#flip.is-action .line:nth-child(1) {
+  top: 50%;
+          transition-delay: .22s;
+    transition-timing-function: cubic-bezier(.2, .6, .3, 1);
+    transform: translate3d(0px, -1px, 0) rotate(-135deg);
+}
+#flip.is-action .line:nth-child(2) {
+  transform: translate(2px,1px) rotate(-45deg);
+  transform-origin: 10px;
 }
