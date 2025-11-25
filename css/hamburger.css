@@ -224,6 +224,8 @@ h1 {
 
 .anim-flip.is-action .line:nth-child(1) {
   transform: translate(-50%, -50%) rotate( -135deg);
+  transition: top .22s cubic-bezier(.33333, 0, .66667, .33333) .2s,
+  transform .28s cubic-bezier(.215, .61, .355, 1) .2s;
 }
 
 .anim-flip.is-action .line:nth-child(2) {
