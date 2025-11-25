@@ -91,6 +91,22 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 
+
+.slide-line {
+  position: absolute;
+  top: 0;
+  left: 13%;
+  width: 40px;
+  height: 3px;
+      flex-shrink: 0;
+  border-radius: 6px;
+  background-color:  var(--hamburger-bar);
+  transition: top 0.3s ease, transform 0.3s ease;
+  transition-property: transform, top;
+          transition-duration: 0.3s;
+}
+
+
 /* Upper line */
 .line:first-of-type {
   transform: translate(-50%, calc(-50% - 6px));
@@ -113,12 +129,12 @@ h1 {
 }
 
 .theme-red {
-  --hamburger-bg: #d62828;
+  --hamburger-bg: #e55656;
   --hamburger-bar: #fff;
 }
 
 .theme-brown {
-  --hamburger-bg: #7a4b23;
+  --hamburger-bg: #ba9778;
   --hamburger-bar: #fff;
 }
 
@@ -212,4 +228,29 @@ h1 {
 
 .anim-flip.is-action .line:nth-child(2) {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+.slide-line:nth-of-type(1) {
+  top: 30%;
+          transition-delay: 0s, 0.3s;
+}
+
+
+.slide-line:nth-of-type(2) {
+  top: 65%;
+          transition-delay: 0s, 0.3s;
+}
+
+.is-action .slide-line:nth-of-type(1) {
+  top: 50%;
+          transform: translateY(-50%) rotate(-30deg);
+          transition-delay: 0.3s, 0s;
+}
+
+.is-action .slide-line:nth-of-type(2) {
+  top: 50%;
+          transform: translateY(-50%) rotate(30deg);
+          transition-delay: 0.3s, 0s;
 }
